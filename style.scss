@@ -1,0 +1,124 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+// Body Styling
+    $bodyBackground: #352f5b;
+//
+
+// Header Styling
+    $headerFontSize: clamp(1.5rem, 5vw, 3rem);
+    $headerFontColor: white;
+//
+// Todo-List 
+    $todoMinWidth: 250px;
+    $todoBorderRadius: 5px;
+    $todoBoldFontWeight: 600;
+    $todoFontColor: white;
+    $todoPaddingInline: 8%; 
+    $todoMarginBottom: .5vh;
+    // Input Styling
+        $inputWidth: 40vw;
+        $inputHeight: 50px;
+        $inputBackgroundColor:rgba(0,0,0,0.2);
+        $inputPaddingLeft: 2%;
+        $inputOutline: 3px solid rgb(26, 57, 196);
+        $inputFontColor: white;
+    //
+
+    // Items Container Styling
+        $itemsPaddingTop: 2vh;
+        // Item Styling
+            $itemWidth: 40vw;
+            $itemHeight: 50px;
+            $itemBackgroundColor:rgb(62, 5, 196);
+            $itemFontColor: white;
+
+            // Icon Styling
+                $iconSize: 1.7rem;
+            //
+
+            // AddTodo Styling
+                $addPaddingTop: 2%;
+                // Title Styling
+                    $addTitleFontSize: 1.1rem;
+                //
+            //
+        //
+    //
+
+
+body {
+    font-family: Montserrat,sans-serif;
+    background: $bodyBackground;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    &__title {
+        font-size: $headerFontSize;
+        color: $headerFontColor;
+    }
+}
+
+.todo-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    &__input {
+        min-width: $todoMinWidth;
+        width: $inputWidth;
+        height: $inputHeight;
+        border-radius: $todoBorderRadius;
+        background: $inputBackgroundColor;
+        outline: none;
+        border: none;
+        color: $inputFontColor;
+        font-weight: $todoBoldFontWeight;
+        padding-left: $inputPaddingLeft;
+        &:focus {
+            outline: $inputOutline;
+        }
+
+        &::placeholder {
+            font-weight: $todoBoldFontWeight;
+        }
+    }
+
+    &__items {
+        padding-top: $itemsPaddingTop;
+    }
+
+    &__item {
+        min-width: $todoMinWidth;
+        width: $itemWidth;
+        height: $itemHeight;
+        background: $itemBackgroundColor;
+        border-radius: $todoBorderRadius;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        color: $itemFontColor;
+        padding-inline: $todoPaddingInline;
+        margin-bottom: $todoMarginBottom;
+        &__title {
+            font-weight: $todoBoldFontWeight;
+        }
+        &__icon {
+            font-size: $iconSize;
+            color: $todoFontColor;
+        }
+    }
+
+    &__add {
+        padding-top: $addPaddingTop;
+    }
+
+    &__addtitle {
+        font-size: $addTitleFontSize;
+        color: $todoFontColor;
+    }
+}

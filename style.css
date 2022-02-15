@@ -1,0 +1,117 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat,sans-serif;
+  background: #352f5b;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__title {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  color: white;
+}
+
+.todo-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.todo-list__input {
+  min-width: 250px;
+  width: 40vw;
+  height: 50px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.2);
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding-left: 2%;
+}
+
+.todo-list__input:focus {
+  outline: 3px solid #1a39c4;
+}
+
+.todo-list__input::-webkit-input-placeholder {
+  font-weight: 600;
+}
+
+.todo-list__input:-ms-input-placeholder {
+  font-weight: 600;
+}
+
+.todo-list__input::-ms-input-placeholder {
+  font-weight: 600;
+}
+
+.todo-list__input::placeholder {
+  font-weight: 600;
+}
+
+.todo-list__items {
+  padding-top: 2vh;
+}
+
+.todo-list__item {
+  min-width: 250px;
+  width: 40vw;
+  height: 50px;
+  background: #3e05c4;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: white;
+  padding-inline: 8%;
+  margin-bottom: 0.5vh;
+}
+
+.todo-list__item__title {
+  font-weight: 600;
+}
+
+.todo-list__item__icon {
+  font-size: 1.7rem;
+  color: white;
+}
+
+.todo-list__add {
+  padding-top: 2%;
+}
+
+.todo-list__addtitle {
+  font-size: 1.1rem;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
